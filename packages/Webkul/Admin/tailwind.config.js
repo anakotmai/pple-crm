@@ -25,23 +25,23 @@ module.exports = {
 
         extend: {
             colors: {
-                brandColor: '#0E90D9',
+                brandColor: "#FF6413",
             },
 
             fontFamily: {
-                inter: ['Inter'],
-                icon: ['icomoon']
-            }
+                inter: ["Inter"],
+                icon: ["icomoon"],
+            },
         },
     },
-    
-    darkMode: 'class',
+
+    darkMode: "class",
 
     plugins: [],
 
     safelist: [
         {
             pattern: /icon-/,
-        }
-    ]
+        },
+    ],
 };

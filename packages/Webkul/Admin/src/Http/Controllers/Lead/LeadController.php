@@ -198,9 +198,9 @@ class LeadController extends Controller
     public function view(int $id): View
     {
         $lead = $this->leadRepository->findOrFail($id);
-
+        $userIds = bouncer()->getAuthorizedUserIds();
         if (
-            $userIds = bouncer()->getAuthorizedUserIds()
+            $userIds
             && ! in_array($lead->user_id, $userIds)
         ) {
             return redirect()->route('admin.leads.index');
@@ -474,8 +474,8 @@ class LeadController extends Controller
          * Fetching on the basis of column options.
          */
         return app($column['filterable_options']['repository'])
-            ->select([$column['filterable_options']['column']['label'].' as label', $column['filterable_options']['column']['value'].' as value'])
-            ->where($column['filterable_options']['column']['label'], 'LIKE', '%'.$params['search'].'%')
+            ->select([$column['filterable_options']['column']['label'] . ' as label', $column['filterable_options']['column']['value'] . ' as value'])
+            ->where($column['filterable_options']['column']['label'], 'LIKE', '%' . $params['search'] . '%')
             ->get()
             ->map
             ->only('label', 'value');
