@@ -47,7 +47,7 @@ services:
     ports:
       - 3306:3306
     volumes:
-      - ./.configs/mysql-data:/var/lib/mysql/
+      - mysql_data:/var/lib/mysql/
 
   krayin-redis:
     image: redis:6.2-alpine
@@ -55,7 +55,7 @@ services:
       - 6379:6379
     command: redis-server --save 20 1 --loglevel warning
     volumes:
-      - ./.configs/redis-data:/data
+      - redis_data:/data
 
   krayin-phpmyadmin:
     image: phpmyadmin:latest
@@ -76,3 +76,6 @@ services:
       # SMTP server.
       - 1025:1025
       - 8025:8025
+volumes:
+  mysql_data:
+  redis_data:
