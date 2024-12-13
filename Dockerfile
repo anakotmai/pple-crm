@@ -49,7 +49,7 @@ RUN mkdir -p /home/$user/.composer && \
     chown -R $user:$user /home/$user
 
 # setting apache
-COPY ./.configs/apache.conf /etc/apache2/sites-available/000-default.conf
+COPY ./docker/apache.conf /etc/apache2/sites-available/000-default.conf
 RUN a2enmod rewrite
 
 # setting up project from `src` folder
