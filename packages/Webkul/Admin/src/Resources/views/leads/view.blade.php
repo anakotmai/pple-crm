@@ -44,6 +44,9 @@
 
                 {!! view_render_event('admin.leads.view.title.before', ['lead' => $lead]) !!}
 
+                <!-- Contact Person -->
+                @include ('admin::leads.view.person')
+            
                 <!-- Title -->
                 <h3 class="text-lg font-bold dark:text-white">
                     {{ $lead->title }}
@@ -90,8 +93,6 @@
             <!-- Lead Attributes -->
             @include ('admin::leads.view.attributes')
 
-            <!-- Contact Person -->
-            @include ('admin::leads.view.person')
         </div>
 
         {!! view_render_event('admin.leads.view.left.after', ['lead' => $lead]) !!}

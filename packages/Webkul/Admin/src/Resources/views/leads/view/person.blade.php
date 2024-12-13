@@ -1,7 +1,7 @@
 {!! view_render_event('admin.leads.view.person.before', ['lead' => $lead]) !!}
 
 @if ($lead?->person)
-    <div class="flex w-full flex-col gap-4 border-b border-gray-200 p-4 dark:border-gray-800">
+    <div class="flex w-full flex-col gap-4 border-b border-gray-200 py-4 dark:border-gray-800">
         <h4 class="flex items-center justify-between font-semibold dark:text-white">
             @lang('admin::app.leads.view.persons.title')
 
@@ -15,15 +15,8 @@
         </h4>
 
         <div class="flex gap-2">
-            {!! view_render_event('admin.leads.view.person.avatar.before', ['lead' => $lead]) !!}
-
-            <!-- Person Initials -->
-            <x-admin::avatar :name="$lead->person->name" />
-
-            {!! view_render_event('admin.leads.view.person.avatar.after', ['lead' => $lead]) !!}
-
             <!-- Person Details -->
-            <div class="flex flex-col gap-1">
+            <div class="flex flex-col gap-1 text-2xl">
                 {!! view_render_event('admin.leads.view.person.name.before', ['lead' => $lead]) !!}
 
                 <a
@@ -53,25 +46,6 @@
 
                 {!! view_render_event('admin.leads.view.person.job_title.after', ['lead' => $lead]) !!}
             
-                {!! view_render_event('admin.leads.view.person.email.before', ['lead' => $lead]) !!}
-
-                @foreach ($lead->person->emails as $email)
-                    <div class="flex gap-1">
-                        <a 
-                            class="text-brandColor"
-                            href="mailto:{{ $email['value'] }}"
-                        >
-                            {{ $email['value'] }}
-                        </a>
-
-                        <span class="text-gray-500 dark:text-gray-300">
-                            ({{ $email['label'] }})
-                        </span>
-                    </div>
-                @endforeach
-
-                {!! view_render_event('admin.leads.view.person.email.after', ['lead' => $lead]) !!}
-
                 {!! view_render_event('admin.leads.view.person.contact_numbers.before', ['lead' => $lead]) !!}
             
                 @foreach ($lead->person->contact_numbers as $contactNumber)
@@ -82,10 +56,6 @@
                         >
                             {{ $contactNumber['value'] }}
                         </a>
-
-                        <span class="text-gray-500 dark:text-gray-300">
-                            ({{ $contactNumber['label'] }})
-                        </span>
                     </div>
                 @endforeach
 

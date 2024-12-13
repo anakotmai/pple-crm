@@ -121,7 +121,7 @@
                                 {!! view_render_event('admin.leads.index.kanban.content.stage.body.card.before') !!}
 
                                 <a
-                                    class="lead-item flex cursor-pointer flex-col gap-5 rounded-md border border-gray-100 bg-gray-50 p-2 dark:border-gray-400 dark:bg-gray-400"
+                                    class="lead-item flex cursor-pointer flex-col gap-2 rounded-md border border-gray-900 bg-gray-50 p-2 dark:border-gray-400 dark:bg-gray-400"
                                     :href="'{{ route('admin.leads.view', 'replaceId') }}'.replace('replaceId', element.id)"
                                 >
                                     {!! view_render_event('admin.leads.index.kanban.content.stage.body.card.header.before') !!}
@@ -131,13 +131,17 @@
                                         <div class="flex items-center gap-1">
                                             <x-admin::avatar ::name="element.person.name" />
                                   
-                                            <div class="flex flex-col gap-0.5">
-                                                <span class="text-xs font-medium">
+                                            <div class="flex flex-col">
+                                                <span class="text-md font-medium">
                                                     @{{ element.person.name }}
                                                 </span>
 
                                                 <span class="text-[10px] leading-normal">
                                                     @{{ element.person.organization?.name }}
+                                                </span>
+
+                                                <span class="text-md leading-normal">
+                                                    @{{ element.person.contact_numbers[0].value }}
                                                 </span>
                                             </div>
                                         </div>
@@ -163,33 +167,13 @@
                                     {!! view_render_event('admin.leads.index.kanban.content.stage.body.card.title.before') !!}
 
                                     <!-- Lead Title -->
-                                    <p class="text-xs font-medium">
+                                    <p class="text-md font-medium">
                                         @{{ element.title }}
                                     </p>
 
                                     {!! view_render_event('admin.leads.index.kanban.content.stage.body.card.title.after') !!}
 
-                                    <div class="flex flex-wrap gap-1">
-                                        <div
-                                            class="flex items-center gap-1 rounded-xl bg-gray-200 px-2 py-1 text-xs font-medium dark:bg-gray-800 dark:text-white"
-                                            v-if="element.user"
-                                        >
-                                            <span class="icon-settings-user text-sm"></span>
-                                            
-                                            @{{ element.user.name }}
-                                        </div>
-
-                                        <div class="rounded-xl bg-gray-200 px-2 py-1 text-xs font-medium dark:bg-gray-800 dark:text-white">
-                                            @{{ element.formatted_lead_value }}
-                                        </div>
-
-                                        <div class="rounded-xl bg-gray-200 px-2 py-1 text-xs font-medium dark:bg-gray-800 dark:text-white">
-                                            @{{ element.source.name }}
-                                        </div>
-
-                                        <div class="rounded-xl bg-gray-200 px-2 py-1 text-xs font-medium dark:bg-gray-800 dark:text-white">
-                                            @{{ element.type.name }}
-                                        </div>
+                                    <div class="flex flex-wrap gap-1" v-if="element.tags.length > 0">
 
                                         <!-- Tags -->
                                         <template v-for="tag in element.tags">
