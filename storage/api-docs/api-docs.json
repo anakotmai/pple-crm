@@ -10,16 +10,14 @@
     },
     "servers": [
         {
-            "url": "http://localhost:8000",
+            "url": "https://crm.pplethai.org",
             "description": "Krayin Rest API."
         }
     ],
     "paths": {
         "/api/v1/activities": {
             "get": {
-                "tags": [
-                    "Activity"
-                ],
+                "tags": ["Activity"],
                 "summary": "Get list of activities",
                 "operationId": "activityList",
                 "parameters": [
@@ -40,10 +38,7 @@
                         "required": false,
                         "schema": {
                             "type": "string",
-                            "enum": [
-                                "desc",
-                                "asc"
-                            ]
+                            "enum": ["desc", "asc"]
                         }
                     },
                     {
@@ -94,9 +89,7 @@
                 ]
             },
             "post": {
-                "tags": [
-                    "Activity"
-                ],
+                "tags": ["Activity"],
                 "summary": "Create activity",
                 "operationId": "activityStore",
                 "requestBody": {
@@ -291,9 +284,7 @@
         },
         "/api/v1/activities/{id}": {
             "get": {
-                "tags": [
-                    "Activity"
-                ],
+                "tags": ["Activity"],
                 "summary": "Fetch activity",
                 "operationId": "activityFetch",
                 "parameters": [
@@ -334,9 +325,7 @@
                 ]
             },
             "put": {
-                "tags": [
-                    "Activity"
-                ],
+                "tags": ["Activity"],
                 "summary": "Update activity",
                 "operationId": "activityUpdate",
                 "parameters": [
@@ -462,9 +451,7 @@
                 ]
             },
             "delete": {
-                "tags": [
-                    "Activity"
-                ],
+                "tags": ["Activity"],
                 "summary": "Delete activity",
                 "operationId": "activityDelete",
                 "parameters": [
@@ -495,9 +482,7 @@
         },
         "/api/v1/activities/file-download/{id}": {
             "get": {
-                "tags": [
-                    "Activity"
-                ],
+                "tags": ["Activity"],
                 "summary": "Download file",
                 "operationId": "activityDownload",
                 "parameters": [
@@ -536,9 +521,7 @@
         },
         "/api/v1/activities/mass-update": {
             "post": {
-                "tags": [
-                    "Activity"
-                ],
+                "tags": ["Activity"],
                 "summary": "Mass update activities",
                 "operationId": "activityMassUpdate",
                 "requestBody": {
@@ -583,9 +566,7 @@
         },
         "/api/v1/activities/mass-destroy": {
             "post": {
-                "tags": [
-                    "Activity"
-                ],
+                "tags": ["Activity"],
                 "summary": "Mass destroy activities",
                 "operationId": "activityMassDestroy",
                 "requestBody": {
@@ -625,9 +606,7 @@
         },
         "/api/v1/get": {
             "get": {
-                "tags": [
-                    "Authentication"
-                ],
+                "tags": ["Authentication"],
                 "summary": "Get logged in admin user's details",
                 "description": "Get logged in admin user's details",
                 "operationId": "getAdminUser",
@@ -663,9 +642,7 @@
         },
         "/api/v1/update": {
             "post": {
-                "tags": [
-                    "Authentication"
-                ],
+                "tags": ["Authentication"],
                 "summary": "Update admin user's profile",
                 "description": "Update admin user's profile",
                 "operationId": "updateAdminUser",
@@ -673,10 +650,7 @@
                     "content": {
                         "multipart/form-data": {
                             "schema": {
-                                "required": [
-                                    "name",
-                                    "current_password"
-                                ],
+                                "required": ["name", "current_password"],
                                 "properties": {
                                     "_method": {
                                         "type": "string",
@@ -760,9 +734,7 @@
         },
         "/api/v1/logout": {
             "delete": {
-                "tags": [
-                    "Authentication"
-                ],
+                "tags": ["Authentication"],
                 "summary": "Logout admin user",
                 "description": "Logout admin user",
                 "operationId": "logoutAdminUser",
@@ -796,9 +768,7 @@
         },
         "/api/v1/login": {
             "post": {
-                "tags": [
-                    "Authentication"
-                ],
+                "tags": ["Authentication"],
                 "summary": "Login admin user",
                 "description": "Login admin user",
                 "operationId": "adminLogin",
@@ -873,9 +843,7 @@
         },
         "/api/v1/configuration": {
             "post": {
-                "tags": [
-                    "Configuration"
-                ],
+                "tags": ["Configuration"],
                 "summary": "Create new Configuration",
                 "operationId": "storeConfiguration",
                 "requestBody": {
@@ -934,9 +902,7 @@
         },
         "/api/v1/contacts/organizations": {
             "get": {
-                "tags": [
-                    "Contacts"
-                ],
+                "tags": ["Contacts"],
                 "summary": "Get list of organizations",
                 "operationId": "organizationList",
                 "parameters": [
@@ -957,10 +923,7 @@
                         "required": false,
                         "schema": {
                             "type": "string",
-                            "enum": [
-                                "desc",
-                                "asc"
-                            ]
+                            "enum": ["desc", "asc"]
                         }
                     },
                     {
@@ -1011,9 +974,7 @@
                 ]
             },
             "post": {
-                "tags": [
-                    "Contacts"
-                ],
+                "tags": ["Contacts"],
                 "summary": "Store a new organization",
                 "description": "Create a new organization with the provided details",
                 "operationId": "storeOrganization",
@@ -1081,9 +1042,7 @@
         },
         "/api/v1/contacts/organizations/{id}": {
             "get": {
-                "tags": [
-                    "Contacts"
-                ],
+                "tags": ["Contacts"],
                 "summary": "Get organization by id",
                 "operationId": "organizationShow",
                 "parameters": [
@@ -1124,9 +1083,7 @@
                 ]
             },
             "put": {
-                "tags": [
-                    "Contacts"
-                ],
+                "tags": ["Contacts"],
                 "summary": "Update an organization",
                 "description": "Update an organization with the provided details",
                 "operationId": "updateOrganization",
@@ -1211,9 +1168,7 @@
                 ]
             },
             "delete": {
-                "tags": [
-                    "Contacts"
-                ],
+                "tags": ["Contacts"],
                 "summary": "Delete an organization",
                 "description": "Delete an organization by id",
                 "operationId": "deleteOrganization",
@@ -1245,9 +1200,7 @@
         },
         "/api/v1/contacts/organizations/mass-destroy": {
             "post": {
-                "tags": [
-                    "Contacts"
-                ],
+                "tags": ["Contacts"],
                 "summary": "Delete multiple organizations",
                 "description": "Delete multiple organizations by id",
                 "operationId": "massDeleteOrganization",
@@ -1289,9 +1242,7 @@
         },
         "/api/v1/contacts/persons/{id}/activities": {
             "get": {
-                "tags": [
-                    "Contacts"
-                ],
+                "tags": ["Contacts"],
                 "summary": "Get list of persons",
                 "operationId": "getPersonActivities",
                 "parameters": [
@@ -1337,9 +1288,7 @@
         },
         "/api/v1/contacts/persons": {
             "get": {
-                "tags": [
-                    "Contacts"
-                ],
+                "tags": ["Contacts"],
                 "summary": "Get list of contact person",
                 "operationId": "contactList",
                 "parameters": [
@@ -1360,10 +1309,7 @@
                         "required": false,
                         "schema": {
                             "type": "string",
-                            "enum": [
-                                "desc",
-                                "asc"
-                            ]
+                            "enum": ["desc", "asc"]
                         }
                     },
                     {
@@ -1414,9 +1360,7 @@
                 ]
             },
             "post": {
-                "tags": [
-                    "Contacts"
-                ],
+                "tags": ["Contacts"],
                 "summary": "Create new contact person",
                 "operationId": "createPerson",
                 "requestBody": {
@@ -1434,10 +1378,7 @@
                                         "description": "Email addresses of the person",
                                         "type": "array",
                                         "items": {
-                                            "required": [
-                                                "value",
-                                                "label"
-                                            ],
+                                            "required": ["value", "label"],
                                             "properties": {
                                                 "value": {
                                                     "description": "Email address",
@@ -1457,10 +1398,7 @@
                                         "description": "Contact numbers of the person",
                                         "type": "array",
                                         "items": {
-                                            "required": [
-                                                "value",
-                                                "label"
-                                            ],
+                                            "required": ["value", "label"],
                                             "properties": {
                                                 "value": {
                                                     "description": "Contact number",
@@ -1521,9 +1459,7 @@
         },
         "/api/v1/contacts/persons/search": {
             "get": {
-                "tags": [
-                    "Contacts"
-                ],
+                "tags": ["Contacts"],
                 "summary": "Get person by search query",
                 "description": "Retrieve persons based on a search query",
                 "operationId": "getPersonBySearchQuery",
@@ -1577,9 +1513,7 @@
         },
         "/api/v1/contacts/persons/{id}": {
             "get": {
-                "tags": [
-                    "Contacts"
-                ],
+                "tags": ["Contacts"],
                 "summary": "Get contact person by id",
                 "operationId": "getPersonById",
                 "parameters": [
@@ -1620,9 +1554,7 @@
                 ]
             },
             "put": {
-                "tags": [
-                    "Contacts"
-                ],
+                "tags": ["Contacts"],
                 "summary": "Update contact person",
                 "operationId": "updatePerson",
                 "parameters": [
@@ -1651,10 +1583,7 @@
                                         "description": "Email addresses of the person",
                                         "type": "array",
                                         "items": {
-                                            "required": [
-                                                "value",
-                                                "label"
-                                            ],
+                                            "required": ["value", "label"],
                                             "properties": {
                                                 "value": {
                                                     "description": "Email address",
@@ -1674,10 +1603,7 @@
                                         "description": "Contact numbers of the person",
                                         "type": "array",
                                         "items": {
-                                            "required": [
-                                                "value",
-                                                "label"
-                                            ],
+                                            "required": ["value", "label"],
                                             "properties": {
                                                 "value": {
                                                     "description": "Contact number",
@@ -1736,9 +1662,7 @@
                 ]
             },
             "delete": {
-                "tags": [
-                    "Contacts"
-                ],
+                "tags": ["Contacts"],
                 "summary": "Delete contact person",
                 "operationId": "deletePerson",
                 "parameters": [
@@ -1769,9 +1693,7 @@
         },
         "/api/v1/contacts/persons/mass-destroy": {
             "post": {
-                "tags": [
-                    "Contacts"
-                ],
+                "tags": ["Contacts"],
                 "summary": "Delete multiple contact persons",
                 "operationId": "massDeletePerson",
                 "requestBody": {
@@ -1811,9 +1733,7 @@
         },
         "/api/v1/contacts/persons/{id}/tags": {
             "post": {
-                "tags": [
-                    "Contacts"
-                ],
+                "tags": ["Contacts"],
                 "summary": "Attached tags to the Persons",
                 "description": "Attached tags to the Persons",
                 "operationId": "attachPersonTags",
@@ -1870,9 +1790,7 @@
                 ]
             },
             "delete": {
-                "tags": [
-                    "Contacts"
-                ],
+                "tags": ["Contacts"],
                 "summary": "Dettached tags to the Persons",
                 "description": "Dettached tags to the Persons",
                 "operationId": "detachPersonTags",
@@ -1931,9 +1849,7 @@
         },
         "/api/v1/leads/{id}/activities": {
             "get": {
-                "tags": [
-                    "Leads"
-                ],
+                "tags": ["Leads"],
                 "summary": "Get list of leads",
                 "operationId": "getLeadActivities",
                 "parameters": [
@@ -1979,9 +1895,7 @@
         },
         "/api/v1/leads/{id}/emails": {
             "post": {
-                "tags": [
-                    "Leads"
-                ],
+                "tags": ["Leads"],
                 "summary": "Send an Email to a Lead",
                 "description": "Send an Email to a Lead with attachments",
                 "operationId": "sendEmailToLead",
@@ -2078,9 +1992,7 @@
                 ]
             },
             "delete": {
-                "tags": [
-                    "Leads"
-                ],
+                "tags": ["Leads"],
                 "summary": "Detach an Email from a Lead",
                 "description": "Delete an association of an email with a specific lead.",
                 "operationId": "detachEmailFromLead",
@@ -2148,9 +2060,7 @@
         },
         "/api/v1/leads": {
             "get": {
-                "tags": [
-                    "Leads"
-                ],
+                "tags": ["Leads"],
                 "summary": "Get list of leads",
                 "operationId": "leadList",
                 "parameters": [
@@ -2171,10 +2081,7 @@
                         "required": false,
                         "schema": {
                             "type": "string",
-                            "enum": [
-                                "desc",
-                                "asc"
-                            ]
+                            "enum": ["desc", "asc"]
                         }
                     },
                     {
@@ -2225,9 +2132,7 @@
                 ]
             },
             "post": {
-                "tags": [
-                    "Leads"
-                ],
+                "tags": ["Leads"],
                 "summary": "Store the Leads",
                 "description": "Store the Leads",
                 "operationId": "storeLead",
@@ -2266,22 +2171,13 @@
                                     },
                                     "lead_source_id": {
                                         "description": "The source of the lead. Possible values:\n     *                           1: Email\n     *                           2: Web\n     *                           3: Web Form\n     *                           4: Phone\n     *                           5: Direct\n     *                      ",
-                                        "enum": [
-                                            1,
-                                            2,
-                                            3,
-                                            4,
-                                            5
-                                        ],
+                                        "enum": [1, 2, 3, 4, 5],
                                         "example": "1"
                                     },
                                     "lead_type_id": {
                                         "description": "The source of the lead. Possible values:\n     *                           1: New Business\n     *                           2: Existing Business\n     *                      ",
                                         "type": "integer",
-                                        "enum": [
-                                            1,
-                                            2
-                                        ],
+                                        "enum": [1, 2],
                                         "example": "1"
                                     },
                                     "user_id": {
@@ -2427,9 +2323,7 @@
         },
         "/api/v1/leads/{id}": {
             "get": {
-                "tags": [
-                    "Leads"
-                ],
+                "tags": ["Leads"],
                 "summary": "Get the particular Lead",
                 "description": "Get the particular Lead",
                 "operationId": "getParticularLead",
@@ -2468,9 +2362,7 @@
                 ]
             },
             "put": {
-                "tags": [
-                    "Leads"
-                ],
+                "tags": ["Leads"],
                 "summary": "Store the Leads",
                 "description": "Store the Leads",
                 "operationId": "updateLeads",
@@ -2520,22 +2412,13 @@
                                     },
                                     "lead_source_id": {
                                         "description": "The source of the lead. Possible values:\n     *                           1: Email\n     *                           2: Web\n     *                           3: Web Form\n     *                           4: Phone\n     *                           5: Direct\n     *                      ",
-                                        "enum": [
-                                            1,
-                                            2,
-                                            3,
-                                            4,
-                                            5
-                                        ],
+                                        "enum": [1, 2, 3, 4, 5],
                                         "example": "1"
                                     },
                                     "lead_type_id": {
                                         "description": "The source of the lead. Possible values:\n     *                           1: New Business\n     *                           2: Existing Business\n     *                      ",
                                         "type": "integer",
-                                        "enum": [
-                                            1,
-                                            2
-                                        ],
+                                        "enum": [1, 2],
                                         "example": "1"
                                     },
                                     "user_id": {
@@ -2661,9 +2544,7 @@
                 ]
             },
             "delete": {
-                "tags": [
-                    "Leads"
-                ],
+                "tags": ["Leads"],
                 "summary": "Delete the Leads",
                 "description": "Delete the Leads",
                 "operationId": "deleteLeads",
@@ -2708,9 +2589,7 @@
         },
         "/api/v1/leads/search": {
             "get": {
-                "tags": [
-                    "Leads"
-                ],
+                "tags": ["Leads"],
                 "summary": "Search the Leads",
                 "description": "Search the Leads",
                 "operationId": "searchLeads",
@@ -2769,9 +2648,7 @@
         },
         "/api/v1/leads/get": {
             "get": {
-                "tags": [
-                    "Leads"
-                ],
+                "tags": ["Leads"],
                 "summary": "Get the Leads",
                 "description": "Get the Leads",
                 "operationId": "Get the Leads",
@@ -2839,9 +2716,7 @@
         },
         "/api/v1/leads/kanban/look-up": {
             "get": {
-                "tags": [
-                    "Leads"
-                ],
+                "tags": ["Leads"],
                 "summary": "Get the Datagird Searchable dropdown Leads",
                 "description": "Get the Datagird Searchable dropdown Leads",
                 "operationId": "dataGridSearchableDropdown",
@@ -2891,9 +2766,7 @@
         },
         "/api/v1/leads/product/{id}": {
             "put": {
-                "tags": [
-                    "Leads"
-                ],
+                "tags": ["Leads"],
                 "summary": "Store the products related to Leads",
                 "description": "Store the products related to Leads",
                 "operationId": "updateProductRelatedtoLead",
@@ -2994,9 +2867,7 @@
                 ]
             },
             "delete": {
-                "tags": [
-                    "Leads"
-                ],
+                "tags": ["Leads"],
                 "summary": "Store the products related to Leads",
                 "description": "Store the products related to Leads",
                 "operationId": "deleteProductRelatedtoLead",
@@ -3015,9 +2886,7 @@
                     "content": {
                         "application/json": {
                             "schema": {
-                                "required": [
-                                    "product_id"
-                                ],
+                                "required": ["product_id"],
                                 "properties": {
                                     "product_id": {
                                         "description": "Product ID associated with the lead",
@@ -3063,9 +2932,7 @@
         },
         "/api/v1/leads/attributes/edit/{id}": {
             "put": {
-                "tags": [
-                    "Leads"
-                ],
+                "tags": ["Leads"],
                 "summary": "Update the lead attributes",
                 "description": "Update the lead attributes",
                 "operationId": "updateLeadAttribute",
@@ -3129,9 +2996,7 @@
         },
         "/api/v1/leads/stage/edit/{id}": {
             "put": {
-                "tags": [
-                    "Leads"
-                ],
+                "tags": ["Leads"],
                 "summary": "Update the lead stage",
                 "description": "Update the lead stage",
                 "operationId": "updateLeadStage",
@@ -3195,9 +3060,7 @@
         },
         "/api/v1/leads/mass-update": {
             "post": {
-                "tags": [
-                    "Leads"
-                ],
+                "tags": ["Leads"],
                 "summary": "Mass update Leads",
                 "description": "Mass update Leads, here you can update the leads stages.",
                 "operationId": "massUpdateLeads",
@@ -3253,9 +3116,7 @@
         },
         "/api/v1/leads/mass-destroy": {
             "post": {
-                "tags": [
-                    "Leads"
-                ],
+                "tags": ["Leads"],
                 "summary": "Mass delete Leads",
                 "description": "Mass delete Leads",
                 "operationId": "massDeleteLeads",
@@ -3263,16 +3124,12 @@
                     "content": {
                         "application/json": {
                             "schema": {
-                                "required": [
-                                    "indices"
-                                ],
+                                "required": ["indices"],
                                 "properties": {
                                     "indices": {
                                         "description": "Leads's Ids `CommaSeparated`",
                                         "type": "string",
-                                        "example": [
-                                            1
-                                        ]
+                                        "example": [1]
                                     }
                                 },
                                 "type": "object"
@@ -3307,9 +3164,7 @@
         },
         "/api/v1/leads/{id}/quotes/{quote_id}": {
             "delete": {
-                "tags": [
-                    "Leads"
-                ],
+                "tags": ["Leads"],
                 "summary": "Delete a Quote from a Lead",
                 "description": "Remove a specific quote associated with a lead.",
                 "operationId": "deleteQuoteFromLead",
@@ -3366,9 +3221,7 @@
         },
         "/api/v1/leads/{id}/tags": {
             "post": {
-                "tags": [
-                    "Leads"
-                ],
+                "tags": ["Leads"],
                 "summary": "Attached tags to the Leads",
                 "description": "Attached tags to the Leads",
                 "operationId": "attachTags",
@@ -3425,9 +3278,7 @@
                 ]
             },
             "delete": {
-                "tags": [
-                    "Leads"
-                ],
+                "tags": ["Leads"],
                 "summary": "Dettached tags to the Leads",
                 "description": "Dettached tags to the Leads",
                 "operationId": "dettachTags",
@@ -3486,9 +3337,7 @@
         },
         "/api/v1/mails": {
             "get": {
-                "tags": [
-                    "Mail"
-                ],
+                "tags": ["Mail"],
                 "summary": "Get list of mails",
                 "operationId": "mailList",
                 "parameters": [
@@ -3509,10 +3358,7 @@
                         "required": false,
                         "schema": {
                             "type": "string",
-                            "enum": [
-                                "desc",
-                                "asc"
-                            ]
+                            "enum": ["desc", "asc"]
                         }
                     },
                     {
@@ -3563,9 +3409,7 @@
                 ]
             },
             "post": {
-                "tags": [
-                    "Mail"
-                ],
+                "tags": ["Mail"],
                 "summary": "Store an email",
                 "description": "Store an email with the provided data",
                 "operationId": "storeEmail",
@@ -3667,9 +3511,7 @@
         },
         "/api/v1/mails/{id}": {
             "get": {
-                "tags": [
-                    "Mail"
-                ],
+                "tags": ["Mail"],
                 "summary": "Get mail information",
                 "operationId": "mailGet",
                 "parameters": [
@@ -3698,9 +3540,7 @@
                 ]
             },
             "post": {
-                "tags": [
-                    "Mail"
-                ],
+                "tags": ["Mail"],
                 "summary": "Update existing mail",
                 "operationId": "mailUpdate",
                 "parameters": [
@@ -3807,9 +3647,7 @@
                 ]
             },
             "delete": {
-                "tags": [
-                    "Mail"
-                ],
+                "tags": ["Mail"],
                 "summary": "Delete existing mail",
                 "operationId": "mailDelete",
                 "parameters": [
@@ -3864,9 +3702,7 @@
         },
         "/api/v1/mails/mass-update": {
             "post": {
-                "tags": [
-                    "Mail"
-                ],
+                "tags": ["Mail"],
                 "summary": "Mass update mails",
                 "operationId": "mailMassUpdate",
                 "requestBody": {
@@ -3930,9 +3766,7 @@
         },
         "/api/v1/mails/mass-destroy": {
             "post": {
-                "tags": [
-                    "Mail"
-                ],
+                "tags": ["Mail"],
                 "summary": "Mass delete mails",
                 "operationId": "mailMassDestroy",
                 "requestBody": {
@@ -3990,9 +3824,7 @@
         },
         "/api/v1/mails/attachment-download/{id}": {
             "get": {
-                "tags": [
-                    "Mail"
-                ],
+                "tags": ["Mail"],
                 "summary": "Download attachment",
                 "operationId": "mailAttachmentDownload",
                 "parameters": [
@@ -4023,9 +3855,7 @@
         },
         "/api/v1/mails/{id}/tags": {
             "post": {
-                "tags": [
-                    "Mail"
-                ],
+                "tags": ["Mail"],
                 "summary": "Attached tags to the mail",
                 "description": "Attached tags to the mail",
                 "operationId": "attachEmailTags",
@@ -4082,9 +3912,7 @@
                 ]
             },
             "delete": {
-                "tags": [
-                    "Mail"
-                ],
+                "tags": ["Mail"],
                 "summary": "Dettached tags to the mail",
                 "description": "Dettached tags to the mail",
                 "operationId": "detachEmailTags",
@@ -4143,9 +3971,7 @@
         },
         "/api/v1/products": {
             "get": {
-                "tags": [
-                    "Products"
-                ],
+                "tags": ["Products"],
                 "summary": "Get list of products",
                 "operationId": "productList",
                 "parameters": [
@@ -4166,10 +3992,7 @@
                         "required": false,
                         "schema": {
                             "type": "string",
-                            "enum": [
-                                "desc",
-                                "asc"
-                            ]
+                            "enum": ["desc", "asc"]
                         }
                     },
                     {
@@ -4220,9 +4043,7 @@
                 ]
             },
             "post": {
-                "tags": [
-                    "Products"
-                ],
+                "tags": ["Products"],
                 "summary": "Create new product",
                 "operationId": "productCreate",
                 "requestBody": {
@@ -4297,9 +4118,7 @@
         },
         "/api/v1/products/search": {
             "get": {
-                "tags": [
-                    "Products"
-                ],
+                "tags": ["Products"],
                 "summary": "search the products",
                 "description": "search the products heres the bagisto is the search keyword",
                 "operationId": "searchProducts",
@@ -4358,9 +4177,7 @@
         },
         "/api/v1/products/{id}/inventories/{warehouseId}": {
             "post": {
-                "tags": [
-                    "Products"
-                ],
+                "tags": ["Products"],
                 "summary": "Store Inventory for a Product",
                 "description": "Store inventory data for a specific product in a specified warehouse. If the warehouse ID is not provided, the inventory will be stored in the default warehouse.",
                 "operationId": "storeProductInventories",
@@ -4462,9 +4279,7 @@
         },
         "/api/v1/products/{id}/warehouses": {
             "get": {
-                "tags": [
-                    "Products"
-                ],
+                "tags": ["Products"],
                 "summary": "Get Warehouses for a Specific Product",
                 "description": "Retrieve a list of warehouses associated with the specified product ID.",
                 "operationId": "getProductWarehouses",
@@ -4508,9 +4323,7 @@
         },
         "/api/v1/products/{id}": {
             "get": {
-                "tags": [
-                    "Products"
-                ],
+                "tags": ["Products"],
                 "summary": "Get product details",
                 "operationId": "productShow",
                 "parameters": [
@@ -4551,9 +4364,7 @@
                 ]
             },
             "put": {
-                "tags": [
-                    "Products"
-                ],
+                "tags": ["Products"],
                 "summary": "Update existing product",
                 "operationId": "productUpdate",
                 "parameters": [
@@ -4637,9 +4448,7 @@
                 ]
             },
             "delete": {
-                "tags": [
-                    "Products"
-                ],
+                "tags": ["Products"],
                 "summary": "Delete existing product",
                 "operationId": "productDelete",
                 "parameters": [
@@ -4682,9 +4491,7 @@
         },
         "/api/v1/products/mass-destroy": {
             "post": {
-                "tags": [
-                    "Products"
-                ],
+                "tags": ["Products"],
                 "summary": "Delete existing products",
                 "operationId": "productMassDestroy",
                 "requestBody": {
@@ -4737,9 +4544,7 @@
         },
         "/api/v1/quotes": {
             "get": {
-                "tags": [
-                    "Quotes"
-                ],
+                "tags": ["Quotes"],
                 "summary": "Get list of quotes",
                 "operationId": "quoteList",
                 "parameters": [
@@ -4760,10 +4565,7 @@
                         "required": false,
                         "schema": {
                             "type": "string",
-                            "enum": [
-                                "desc",
-                                "asc"
-                            ]
+                            "enum": ["desc", "asc"]
                         }
                     },
                     {
@@ -4814,9 +4616,7 @@
                 ]
             },
             "post": {
-                "tags": [
-                    "Quotes"
-                ],
+                "tags": ["Quotes"],
                 "summary": "Store the Quote",
                 "description": "Store the Quote",
                 "operationId": "storeQuote",
@@ -5020,9 +4820,7 @@
         },
         "/api/v1/quotes/search": {
             "get": {
-                "tags": [
-                    "Quotes"
-                ],
+                "tags": ["Quotes"],
                 "summary": "search the quotes",
                 "description": "search the quotes heres the webkul is the search keyword",
                 "operationId": "searchQuotes",
@@ -5081,9 +4879,7 @@
         },
         "/api/v1/quotes/{id}": {
             "get": {
-                "tags": [
-                    "Quotes"
-                ],
+                "tags": ["Quotes"],
                 "summary": "Get quote information",
                 "description": "Get quote information",
                 "operationId": "getQuoteById",
@@ -5125,9 +4921,7 @@
                 ]
             },
             "put": {
-                "tags": [
-                    "Quotes"
-                ],
+                "tags": ["Quotes"],
                 "summary": "Update the Quote",
                 "description": "Update the Quote",
                 "operationId": "updateQuote",
@@ -5345,9 +5139,7 @@
                 ]
             },
             "delete": {
-                "tags": [
-                    "Quotes"
-                ],
+                "tags": ["Quotes"],
                 "summary": "Delete the Quote",
                 "description": "Delete the Quote",
                 "operationId": "deleteQuote",
@@ -5379,9 +5171,7 @@
         },
         "/api/v1/quotes/mass-destroy": {
             "post": {
-                "tags": [
-                    "Quotes"
-                ],
+                "tags": ["Quotes"],
                 "summary": "Delete the Quote",
                 "description": "Delete the Quote",
                 "operationId": "massDeleteQuote",
@@ -5435,9 +5225,7 @@
         },
         "/api/v1/settings/attributes": {
             "get": {
-                "tags": [
-                    "Attribute"
-                ],
+                "tags": ["Attribute"],
                 "summary": "Get list of Attribute",
                 "operationId": "attributeList",
                 "parameters": [
@@ -5458,10 +5246,7 @@
                         "required": false,
                         "schema": {
                             "type": "string",
-                            "enum": [
-                                "desc",
-                                "asc"
-                            ]
+                            "enum": ["desc", "asc"]
                         }
                     },
                     {
@@ -5512,9 +5297,7 @@
                 ]
             },
             "post": {
-                "tags": [
-                    "Attribute"
-                ],
+                "tags": ["Attribute"],
                 "summary": "Create new Attribute",
                 "operationId": "attributeCreate",
                 "requestBody": {
@@ -5620,9 +5403,7 @@
         },
         "/api/v1/settings/attributes/{id}": {
             "get": {
-                "tags": [
-                    "Attribute"
-                ],
+                "tags": ["Attribute"],
                 "summary": "Get Attribute",
                 "operationId": "attributeShow",
                 "parameters": [
@@ -5658,9 +5439,7 @@
                 ]
             },
             "put": {
-                "tags": [
-                    "Attribute"
-                ],
+                "tags": ["Attribute"],
                 "summary": "Update an existing Attribute",
                 "operationId": "attributeUpdate",
                 "parameters": [
@@ -5775,9 +5554,7 @@
                 ]
             },
             "delete": {
-                "tags": [
-                    "Attribute"
-                ],
+                "tags": ["Attribute"],
                 "summary": "Delete one record of Attribute",
                 "operationId": "attributeDelete",
                 "parameters": [
@@ -5823,9 +5600,7 @@
         },
         "/api/v1/settings/attributes/lookup/{lookup}": {
             "get": {
-                "tags": [
-                    "Attribute"
-                ],
+                "tags": ["Attribute"],
                 "summary": "Search attribute lookup results",
                 "operationId": "attributeLookup",
                 "parameters": [
@@ -5880,9 +5655,7 @@
         },
         "/api/v1/settings/attributes/lookup-entity/{lookup}": {
             "get": {
-                "tags": [
-                    "Attribute"
-                ],
+                "tags": ["Attribute"],
                 "summary": "Search attribute lookup results",
                 "operationId": "attributeEntityLookup",
                 "parameters": [
@@ -5934,9 +5707,7 @@
         },
         "/api/v1/settings/attributes/mass-destroy": {
             "post": {
-                "tags": [
-                    "Attribute"
-                ],
+                "tags": ["Attribute"],
                 "summary": "Delete multiple records of Attribute",
                 "operationId": "attributeMassDestroy",
                 "requestBody": {
@@ -5990,9 +5761,7 @@
         },
         "/api/v1/settings/email-templates": {
             "get": {
-                "tags": [
-                    "EmailTemplate"
-                ],
+                "tags": ["EmailTemplate"],
                 "summary": "Get list of email templates",
                 "operationId": "emailTemplateList",
                 "parameters": [
@@ -6013,10 +5782,7 @@
                         "required": false,
                         "schema": {
                             "type": "string",
-                            "enum": [
-                                "desc",
-                                "asc"
-                            ]
+                            "enum": ["desc", "asc"]
                         }
                     },
                     {
@@ -6067,9 +5833,7 @@
                 ]
             },
             "post": {
-                "tags": [
-                    "EmailTemplate"
-                ],
+                "tags": ["EmailTemplate"],
                 "summary": "Create new email template",
                 "operationId": "emailTemplateCreate",
                 "requestBody": {
@@ -6122,9 +5886,7 @@
         },
         "/api/v1/settings/email-templates/{id}": {
             "get": {
-                "tags": [
-                    "EmailTemplate"
-                ],
+                "tags": ["EmailTemplate"],
                 "summary": "Get email template by id",
                 "operationId": "emailTemplateFetch",
                 "parameters": [
@@ -6160,9 +5922,7 @@
                 ]
             },
             "put": {
-                "tags": [
-                    "EmailTemplate"
-                ],
+                "tags": ["EmailTemplate"],
                 "summary": "Update existing email template",
                 "operationId": "emailTemplateUpdate",
                 "parameters": [
@@ -6224,9 +5984,7 @@
                 ]
             },
             "delete": {
-                "tags": [
-                    "EmailTemplate"
-                ],
+                "tags": ["EmailTemplate"],
                 "summary": "Delete one email template",
                 "operationId": "emailTemplateDelete",
                 "parameters": [
@@ -6264,9 +6022,7 @@
         },
         "/api/v1/settings/groups": {
             "get": {
-                "tags": [
-                    "Group"
-                ],
+                "tags": ["Group"],
                 "summary": "Get list of Group",
                 "operationId": "groupList",
                 "parameters": [
@@ -6287,10 +6043,7 @@
                         "required": false,
                         "schema": {
                             "type": "string",
-                            "enum": [
-                                "desc",
-                                "asc"
-                            ]
+                            "enum": ["desc", "asc"]
                         }
                     },
                     {
@@ -6341,19 +6094,14 @@
                 ]
             },
             "post": {
-                "tags": [
-                    "Group"
-                ],
+                "tags": ["Group"],
                 "summary": "Create new Group",
                 "operationId": "groupCreate",
                 "requestBody": {
                     "content": {
                         "multipart/form-data": {
                             "schema": {
-                                "required": [
-                                    "name",
-                                    "description"
-                                ],
+                                "required": ["name", "description"],
                                 "properties": {
                                     "name": {
                                         "description": "Group Name",
@@ -6400,9 +6148,7 @@
         },
         "/api/v1/settings/groups/{id}": {
             "get": {
-                "tags": [
-                    "Group"
-                ],
+                "tags": ["Group"],
                 "summary": "Get Group based on id",
                 "operationId": "groupRead",
                 "parameters": [
@@ -6443,9 +6189,7 @@
                 ]
             },
             "put": {
-                "tags": [
-                    "Group"
-                ],
+                "tags": ["Group"],
                 "summary": "Update existing Group",
                 "operationId": "groupUpdate",
                 "parameters": [
@@ -6463,10 +6207,7 @@
                     "content": {
                         "application/json": {
                             "schema": {
-                                "required": [
-                                    "name",
-                                    "description"
-                                ],
+                                "required": ["name", "description"],
                                 "properties": {
                                     "name": {
                                         "description": "Group Name",
@@ -6511,9 +6252,7 @@
                 ]
             },
             "delete": {
-                "tags": [
-                    "Group"
-                ],
+                "tags": ["Group"],
                 "summary": "Delete existing Group",
                 "operationId": "groupDelete",
                 "parameters": [
@@ -6557,9 +6296,7 @@
         },
         "/api/v1/settings/pipelines": {
             "get": {
-                "tags": [
-                    "Pipeline"
-                ],
+                "tags": ["Pipeline"],
                 "summary": "Get all pipelines",
                 "operationId": "getPipelines",
                 "parameters": [
@@ -6580,10 +6317,7 @@
                         "required": false,
                         "schema": {
                             "type": "string",
-                            "enum": [
-                                "desc",
-                                "asc"
-                            ]
+                            "enum": ["desc", "asc"]
                         }
                     },
                     {
@@ -6634,9 +6368,7 @@
                 ]
             },
             "post": {
-                "tags": [
-                    "Pipeline"
-                ],
+                "tags": ["Pipeline"],
                 "summary": "Create a new pipeline",
                 "operationId": "createPipeline",
                 "requestBody": {
@@ -6792,9 +6524,7 @@
         },
         "/api/v1/settings/pipelines/{id}": {
             "get": {
-                "tags": [
-                    "Pipeline"
-                ],
+                "tags": ["Pipeline"],
                 "summary": "Get a pipeline",
                 "operationId": "getPipeline",
                 "parameters": [
@@ -6835,9 +6565,7 @@
                 ]
             },
             "put": {
-                "tags": [
-                    "Pipeline"
-                ],
+                "tags": ["Pipeline"],
                 "summary": "Update a pipeline",
                 "operationId": "updatePipeline",
                 "parameters": [
@@ -7002,9 +6730,7 @@
                 ]
             },
             "delete": {
-                "tags": [
-                    "Pipeline"
-                ],
+                "tags": ["Pipeline"],
                 "summary": "Delete a pipeline",
                 "operationId": "deletePipeline",
                 "parameters": [
@@ -7038,9 +6764,7 @@
         },
         "/api/v1/settings/roles": {
             "get": {
-                "tags": [
-                    "Role"
-                ],
+                "tags": ["Role"],
                 "summary": "Get list of roles",
                 "operationId": "roleList",
                 "parameters": [
@@ -7061,10 +6785,7 @@
                         "required": false,
                         "schema": {
                             "type": "string",
-                            "enum": [
-                                "desc",
-                                "asc"
-                            ]
+                            "enum": ["desc", "asc"]
                         }
                     },
                     {
@@ -7115,9 +6836,7 @@
                 ]
             },
             "post": {
-                "tags": [
-                    "Role"
-                ],
+                "tags": ["Role"],
                 "summary": "Create new role",
                 "operationId": "roleCreate",
                 "requestBody": {
@@ -7185,9 +6904,7 @@
         },
         "/api/v1/settings/roles/{id}": {
             "get": {
-                "tags": [
-                    "Role"
-                ],
+                "tags": ["Role"],
                 "summary": "Get role details",
                 "operationId": "roleFetch",
                 "parameters": [
@@ -7223,9 +6940,7 @@
                 ]
             },
             "put": {
-                "tags": [
-                    "Role"
-                ],
+                "tags": ["Role"],
                 "summary": "Update existing role",
                 "operationId": "roleUpdate",
                 "parameters": [
@@ -7297,9 +7012,7 @@
                 ]
             },
             "delete": {
-                "tags": [
-                    "Role"
-                ],
+                "tags": ["Role"],
                 "summary": "Delete existing role",
                 "operationId": "roleDelete",
                 "parameters": [
@@ -7337,9 +7050,7 @@
         },
         "/api/v1/settings/sources": {
             "get": {
-                "tags": [
-                    "Source"
-                ],
+                "tags": ["Source"],
                 "summary": "Get list of sources",
                 "operationId": "sourceList",
                 "parameters": [
@@ -7360,10 +7071,7 @@
                         "required": false,
                         "schema": {
                             "type": "string",
-                            "enum": [
-                                "desc",
-                                "asc"
-                            ]
+                            "enum": ["desc", "asc"]
                         }
                     },
                     {
@@ -7414,9 +7122,7 @@
                 ]
             },
             "post": {
-                "tags": [
-                    "Source"
-                ],
+                "tags": ["Source"],
                 "summary": "Create new source",
                 "operationId": "sourceCreate",
                 "requestBody": {
@@ -7467,9 +7173,7 @@
         },
         "/api/v1/settings/sources/{id}": {
             "get": {
-                "tags": [
-                    "Source"
-                ],
+                "tags": ["Source"],
                 "summary": "Get source by id",
                 "operationId": "sourceFetch",
                 "parameters": [
@@ -7513,9 +7217,7 @@
                 ]
             },
             "put": {
-                "tags": [
-                    "Source"
-                ],
+                "tags": ["Source"],
                 "summary": "Update source",
                 "operationId": "sourceUpdate",
                 "parameters": [
@@ -7569,9 +7271,7 @@
                 ]
             },
             "delete": {
-                "tags": [
-                    "Source"
-                ],
+                "tags": ["Source"],
                 "summary": "Delete source",
                 "operationId": "sourceDelete",
                 "parameters": [
@@ -7609,9 +7309,7 @@
         },
         "/api/v1/settings/tags": {
             "get": {
-                "tags": [
-                    "Tag"
-                ],
+                "tags": ["Tag"],
                 "summary": "Get list of tags",
                 "operationId": "tagList",
                 "parameters": [
@@ -7632,10 +7330,7 @@
                         "required": false,
                         "schema": {
                             "type": "string",
-                            "enum": [
-                                "desc",
-                                "asc"
-                            ]
+                            "enum": ["desc", "asc"]
                         }
                     },
                     {
@@ -7686,9 +7381,7 @@
                 ]
             },
             "post": {
-                "tags": [
-                    "Tag"
-                ],
+                "tags": ["Tag"],
                 "summary": "Store the Tags",
                 "description": "Store the Tags",
                 "operationId": "storeTag",
@@ -7696,9 +7389,7 @@
                     "content": {
                         "multipart/form-data": {
                             "schema": {
-                                "required": [
-                                    "name"
-                                ],
+                                "required": ["name"],
                                 "properties": {
                                     "name": {
                                         "description": "Tag Name",
@@ -7751,9 +7442,7 @@
         },
         "/api/v1/settings/tags/{id}": {
             "get": {
-                "tags": [
-                    "Tag"
-                ],
+                "tags": ["Tag"],
                 "summary": "Get Tag by id",
                 "description": "Get Tag by id",
                 "operationId": "showTag",
@@ -7792,9 +7481,7 @@
                 ]
             },
             "put": {
-                "tags": [
-                    "Tag"
-                ],
+                "tags": ["Tag"],
                 "summary": "Update the Tags",
                 "description": "Update the Tags",
                 "operationId": "updateTag",
@@ -7813,9 +7500,7 @@
                     "content": {
                         "application/json": {
                             "schema": {
-                                "required": [
-                                    "name"
-                                ],
+                                "required": ["name"],
                                 "properties": {
                                     "name": {
                                         "description": "Tag Name",
@@ -7866,9 +7551,7 @@
                 ]
             },
             "delete": {
-                "tags": [
-                    "Tag"
-                ],
+                "tags": ["Tag"],
                 "summary": "Delete the Tags",
                 "description": "Delete the Tags",
                 "operationId": "deleteTag",
@@ -7910,9 +7593,7 @@
         },
         "/api/v1/settings/tags/search": {
             "get": {
-                "tags": [
-                    "Tag"
-                ],
+                "tags": ["Tag"],
                 "summary": "search the tags",
                 "description": "search the tags",
                 "operationId": "SearchTags",
@@ -7971,9 +7652,7 @@
         },
         "/api/v1/settings/tags/mass-destroy": {
             "post": {
-                "tags": [
-                    "Tag"
-                ],
+                "tags": ["Tag"],
                 "summary": "Mass Delete the Tags",
                 "description": "Mass Delete the Tags",
                 "operationId": "massDestroyTag",
@@ -7981,9 +7660,7 @@
                     "content": {
                         "application/json": {
                             "schema": {
-                                "required": [
-                                    "indices"
-                                ],
+                                "required": ["indices"],
                                 "properties": {
                                     "indices": {
                                         "description": "Tag Ids",
@@ -8026,9 +7703,7 @@
         },
         "/api/v1/settings/types": {
             "get": {
-                "tags": [
-                    "Type"
-                ],
+                "tags": ["Type"],
                 "summary": "Get list of types",
                 "operationId": "typeList",
                 "parameters": [
@@ -8049,10 +7724,7 @@
                         "required": false,
                         "schema": {
                             "type": "string",
-                            "enum": [
-                                "desc",
-                                "asc"
-                            ]
+                            "enum": ["desc", "asc"]
                         }
                     },
                     {
@@ -8103,9 +7775,7 @@
                 ]
             },
             "post": {
-                "tags": [
-                    "Type"
-                ],
+                "tags": ["Type"],
                 "summary": "Create new source",
                 "operationId": "typeCreate",
                 "requestBody": {
@@ -8156,9 +7826,7 @@
         },
         "/api/v1/settings/types/{id}": {
             "get": {
-                "tags": [
-                    "Type"
-                ],
+                "tags": ["Type"],
                 "summary": "Get source by id",
                 "operationId": "typesFetch",
                 "parameters": [
@@ -8202,9 +7870,7 @@
                 ]
             },
             "put": {
-                "tags": [
-                    "Type"
-                ],
+                "tags": ["Type"],
                 "summary": "Update source",
                 "operationId": "typesUpdate",
                 "parameters": [
@@ -8264,9 +7930,7 @@
                 ]
             },
             "delete": {
-                "tags": [
-                    "Type"
-                ],
+                "tags": ["Type"],
                 "summary": "Delete source",
                 "operationId": "typesDelete",
                 "parameters": [
@@ -8304,9 +7968,7 @@
         },
         "/api/v1/settings/users": {
             "get": {
-                "tags": [
-                    "User"
-                ],
+                "tags": ["User"],
                 "summary": "Get list of users",
                 "operationId": "userList",
                 "parameters": [
@@ -8327,10 +7989,7 @@
                         "required": false,
                         "schema": {
                             "type": "string",
-                            "enum": [
-                                "desc",
-                                "asc"
-                            ]
+                            "enum": ["desc", "asc"]
                         }
                     },
                     {
@@ -8381,9 +8040,7 @@
                 ]
             },
             "post": {
-                "tags": [
-                    "User"
-                ],
+                "tags": ["User"],
                 "summary": "Create new user",
                 "operationId": "userCreate",
                 "requestBody": {
@@ -8477,9 +8134,7 @@
         },
         "/api/v1/settings/users/{id}": {
             "get": {
-                "tags": [
-                    "User"
-                ],
+                "tags": ["User"],
                 "summary": "Get user details",
                 "operationId": "userFetch",
                 "parameters": [
@@ -8520,9 +8175,7 @@
                 ]
             },
             "put": {
-                "tags": [
-                    "User"
-                ],
+                "tags": ["User"],
                 "summary": "Update existing user.",
                 "operationId": "userUpdate",
                 "parameters": [
@@ -8625,9 +8278,7 @@
                 ]
             },
             "delete": {
-                "tags": [
-                    "User"
-                ],
+                "tags": ["User"],
                 "summary": "Delete the Users",
                 "description": "Delete the Users",
                 "operationId": "deleteUser",
@@ -8669,9 +8320,7 @@
         },
         "/api/v1/settings/users/search": {
             "get": {
-                "tags": [
-                    "User"
-                ],
+                "tags": ["User"],
                 "summary": "search the User",
                 "description": "search the user heres the admin is the search keyword",
                 "operationId": "searchUser",
@@ -8730,9 +8379,7 @@
         },
         "/api/v1/settings/users/mass-update": {
             "post": {
-                "tags": [
-                    "User"
-                ],
+                "tags": ["User"],
                 "summary": "Mass Update the Users",
                 "description": "Mass Update the Users",
                 "operationId": "massUpdateUser",
@@ -8787,9 +8434,7 @@
         },
         "/api/v1/settings/users/mass-destroy": {
             "post": {
-                "tags": [
-                    "User"
-                ],
+                "tags": ["User"],
                 "summary": "Mass Delete the Users",
                 "description": "Mass Delete the Users",
                 "operationId": "massDestroyUser",
@@ -8839,9 +8484,7 @@
         },
         "/api/v1/settings/warehouses/{id}/activities": {
             "get": {
-                "tags": [
-                    "Warehouse"
-                ],
+                "tags": ["Warehouse"],
                 "summary": "Get list of warehouse activities",
                 "operationId": "getWarehouseActivities",
                 "parameters": [
@@ -8887,9 +8530,7 @@
         },
         "/api/v1/settings/locations/search": {
             "get": {
-                "tags": [
-                    "Warehouse"
-                ],
+                "tags": ["Warehouse"],
                 "summary": "search the locations",
                 "description": "search the locations",
                 "operationId": "searhLocations",
@@ -8966,9 +8607,7 @@
         },
         "/api/v1/settings/locations": {
             "post": {
-                "tags": [
-                    "Warehouse"
-                ],
+                "tags": ["Warehouse"],
                 "summary": "Store the locations",
                 "description": "Store the locations",
                 "operationId": "storeLocations",
@@ -9020,9 +8659,7 @@
         },
         "/api/v1/settings/locations/{id}": {
             "put": {
-                "tags": [
-                    "Warehouse"
-                ],
+                "tags": ["Warehouse"],
                 "summary": "Update the location",
                 "description": "Update the location by ID",
                 "operationId": "updateLocation",
@@ -9087,9 +8724,7 @@
                 ]
             },
             "delete": {
-                "tags": [
-                    "Warehouse"
-                ],
+                "tags": ["Warehouse"],
                 "summary": "Delete a location",
                 "description": "Delete a location by ID",
                 "operationId": "deleteLocation",
@@ -9151,9 +8786,7 @@
         },
         "/api/v1/settings/warehouses/{id}/tags": {
             "post": {
-                "tags": [
-                    "Warehouse"
-                ],
+                "tags": ["Warehouse"],
                 "summary": "Attached tags to the Warehouses",
                 "description": "Attached tags to the Warehouses",
                 "operationId": "attachWarehouseTags",
@@ -9210,9 +8843,7 @@
                 ]
             },
             "delete": {
-                "tags": [
-                    "Warehouse"
-                ],
+                "tags": ["Warehouse"],
                 "summary": "Dettached tags to the Warehouses",
                 "description": "Dettached tags to the Warehouses",
                 "operationId": "dettachWarehouseTags",
@@ -9271,9 +8902,7 @@
         },
         "/api/v1/settings/warehouses": {
             "get": {
-                "tags": [
-                    "Warehouse"
-                ],
+                "tags": ["Warehouse"],
                 "summary": "Get list of warehouses",
                 "operationId": "warehouses",
                 "parameters": [
@@ -9294,10 +8923,7 @@
                         "required": false,
                         "schema": {
                             "type": "string",
-                            "enum": [
-                                "desc",
-                                "asc"
-                            ]
+                            "enum": ["desc", "asc"]
                         }
                     },
                     {
@@ -9348,9 +8974,7 @@
                 ]
             },
             "post": {
-                "tags": [
-                    "Warehouse"
-                ],
+                "tags": ["Warehouse"],
                 "summary": "Create new warehouse",
                 "operationId": "createWarehouse",
                 "requestBody": {
@@ -9383,10 +9007,7 @@
                                         "description": "Email addresses of the person",
                                         "type": "array",
                                         "items": {
-                                            "required": [
-                                                "value",
-                                                "label"
-                                            ],
+                                            "required": ["value", "label"],
                                             "properties": {
                                                 "value": {
                                                     "description": "Email address",
@@ -9406,10 +9027,7 @@
                                         "description": "Contact numbers of the person",
                                         "type": "array",
                                         "items": {
-                                            "required": [
-                                                "value",
-                                                "label"
-                                            ],
+                                            "required": ["value", "label"],
                                             "properties": {
                                                 "value": {
                                                     "description": "Contact number",
@@ -9485,9 +9103,7 @@
         },
         "/api/v1/settings/warehouses/search": {
             "get": {
-                "tags": [
-                    "Warehouse"
-                ],
+                "tags": ["Warehouse"],
                 "summary": "search the warehouse",
                 "description": "search the warehouse",
                 "operationId": "warehouseSearch",
@@ -9546,9 +9162,7 @@
         },
         "/api/v1/settings/warehouses/view/{id}": {
             "get": {
-                "tags": [
-                    "Warehouse"
-                ],
+                "tags": ["Warehouse"],
                 "summary": "View the warehouse",
                 "description": "View the warehouse",
                 "operationId": "viewWarehouse",
@@ -9589,9 +9203,7 @@
         },
         "/api/v1/settings/warehouses/{id}": {
             "put": {
-                "tags": [
-                    "Warehouse"
-                ],
+                "tags": ["Warehouse"],
                 "summary": "Update warehouse",
                 "operationId": "updateWarehouse",
                 "parameters": [
@@ -9635,10 +9247,7 @@
                                         "description": "Email addresses of the person",
                                         "type": "array",
                                         "items": {
-                                            "required": [
-                                                "value",
-                                                "label"
-                                            ],
+                                            "required": ["value", "label"],
                                             "properties": {
                                                 "value": {
                                                     "description": "Email address",
@@ -9658,10 +9267,7 @@
                                         "description": "Contact numbers of the person",
                                         "type": "array",
                                         "items": {
-                                            "required": [
-                                                "value",
-                                                "label"
-                                            ],
+                                            "required": ["value", "label"],
                                             "properties": {
                                                 "value": {
                                                     "description": "Contact number",
@@ -9735,9 +9341,7 @@
                 ]
             },
             "delete": {
-                "tags": [
-                    "Warehouse"
-                ],
+                "tags": ["Warehouse"],
                 "summary": "Delete warehouse",
                 "description": "Delete a specific warehouse by its ID",
                 "operationId": "deleteWarehouse",
@@ -9798,9 +9402,7 @@
         },
         "/api/v1/settings/web-forms": {
             "get": {
-                "tags": [
-                    "WebForm"
-                ],
+                "tags": ["WebForm"],
                 "summary": "Get list of WebForm",
                 "operationId": "webFormList",
                 "parameters": [
@@ -9821,10 +9423,7 @@
                         "required": false,
                         "schema": {
                             "type": "string",
-                            "enum": [
-                                "desc",
-                                "asc"
-                            ]
+                            "enum": ["desc", "asc"]
                         }
                     },
                     {
@@ -9875,9 +9474,7 @@
                 ]
             },
             "post": {
-                "tags": [
-                    "WebForm"
-                ],
+                "tags": ["WebForm"],
                 "summary": "Create WebForm",
                 "operationId": "webFormCreate",
                 "requestBody": {
@@ -10013,9 +9610,7 @@
         },
         "/api/v1/settings/web-forms/{id}": {
             "get": {
-                "tags": [
-                    "WebForm"
-                ],
+                "tags": ["WebForm"],
                 "summary": "Find WebForm by ID",
                 "operationId": "webFormFind",
                 "parameters": [
@@ -10057,9 +9652,7 @@
                 ]
             },
             "put": {
-                "tags": [
-                    "WebForm"
-                ],
+                "tags": ["WebForm"],
                 "summary": "Update WebForm",
                 "operationId": "webFormUpdate",
                 "parameters": [
@@ -10208,9 +9801,7 @@
                 ]
             },
             "delete": {
-                "tags": [
-                    "WebForm"
-                ],
+                "tags": ["WebForm"],
                 "summary": "Delete WebForm",
                 "operationId": "webFormDelete",
                 "parameters": [
@@ -10255,9 +9846,7 @@
         },
         "/api/v1/settings/webhooks": {
             "get": {
-                "tags": [
-                    "Webhook"
-                ],
+                "tags": ["Webhook"],
                 "summary": "Get list of Webhooks",
                 "operationId": "webhooks",
                 "parameters": [
@@ -10278,10 +9867,7 @@
                         "required": false,
                         "schema": {
                             "type": "string",
-                            "enum": [
-                                "desc",
-                                "asc"
-                            ]
+                            "enum": ["desc", "asc"]
                         }
                     },
                     {
@@ -10332,9 +9918,7 @@
                 ]
             },
             "post": {
-                "tags": [
-                    "Webhook"
-                ],
+                "tags": ["Webhook"],
                 "summary": "Create a new webhook",
                 "description": "Stores a new webhook resource.",
                 "operationId": "storeWebhook",
@@ -10456,9 +10040,7 @@
         },
         "/api/v1/settings/webhooks/{id}": {
             "get": {
-                "tags": [
-                    "Webhook"
-                ],
+                "tags": ["Webhook"],
                 "summary": "Get source by id",
                 "operationId": "WebhookFetch",
                 "parameters": [
@@ -10502,9 +10084,7 @@
                 ]
             },
             "put": {
-                "tags": [
-                    "Webhook"
-                ],
+                "tags": ["Webhook"],
                 "summary": "Update an existing webhook",
                 "description": "Updates the specified webhook resource.",
                 "operationId": "updateWebhook",
@@ -10639,9 +10219,7 @@
                 ]
             },
             "delete": {
-                "tags": [
-                    "Webhook"
-                ],
+                "tags": ["Webhook"],
                 "summary": "Delete a webhook",
                 "description": "Deletes the specified webhook resource.",
                 "operationId": "deleteWebhook",
@@ -10694,9 +10272,7 @@
         },
         "/api/v1/settings/workflows": {
             "get": {
-                "tags": [
-                    "Workflow"
-                ],
+                "tags": ["Workflow"],
                 "summary": "Get list of Workflow",
                 "operationId": "workFlowList",
                 "parameters": [
@@ -10717,10 +10293,7 @@
                         "required": false,
                         "schema": {
                             "type": "string",
-                            "enum": [
-                                "desc",
-                                "asc"
-                            ]
+                            "enum": ["desc", "asc"]
                         }
                     },
                     {
@@ -10771,9 +10344,7 @@
                 ]
             },
             "post": {
-                "tags": [
-                    "Workflow"
-                ],
+                "tags": ["Workflow"],
                 "summary": "Create new workflow.",
                 "description": "Create new workflow.",
                 "operationId": "storeWorkflow",
@@ -10866,9 +10437,7 @@
         },
         "/api/v1/settings/workflows/{id}": {
             "get": {
-                "tags": [
-                    "Workflow"
-                ],
+                "tags": ["Workflow"],
                 "summary": "Get Workflow by ID",
                 "operationId": "showWorkflow",
                 "parameters": [
@@ -10904,9 +10473,7 @@
                 ]
             },
             "put": {
-                "tags": [
-                    "Workflow"
-                ],
+                "tags": ["Workflow"],
                 "summary": "Update an existing Workflow",
                 "operationId": "workFlowUpdate",
                 "parameters": [
@@ -11007,9 +10574,7 @@
                 ]
             },
             "delete": {
-                "tags": [
-                    "Workflow"
-                ],
+                "tags": ["Workflow"],
                 "summary": "Delete an existing Workflow",
                 "operationId": "workFlowDelete",
                 "parameters": [
@@ -11368,10 +10933,7 @@
                         "title": "Lead Status",
                         "description": "Lead Status",
                         "type": "boolean",
-                        "enum": [
-                            0,
-                            1
-                        ],
+                        "enum": [0, 1],
                         "example": 1
                     },
                     "lost_reason": {
@@ -11556,10 +11118,7 @@
                         "items": {
                             "type": "string"
                         },
-                        "example": [
-                            "Inbox",
-                            "Archive"
-                        ]
+                        "example": ["Inbox", "Archive"]
                     },
                     "from": {
                         "title": "From",
@@ -11586,10 +11145,7 @@
                         "items": {
                             "type": "string"
                         },
-                        "example": [
-                            "cc1@example.com",
-                            "cc2@example.com"
-                        ]
+                        "example": ["cc1@example.com", "cc2@example.com"]
                     },
                     "bcc": {
                         "title": "BCC",
@@ -11598,10 +11154,7 @@
                         "items": {
                             "type": "string"
                         },
-                        "example": [
-                            "bcc1@example.com",
-                            "bcc2@example.com"
-                        ]
+                        "example": ["bcc1@example.com", "bcc2@example.com"]
                     },
                     "unique_id": {
                         "title": "Unique ID",
@@ -11622,10 +11175,7 @@
                         "items": {
                             "type": "string"
                         },
-                        "example": [
-                            "ref-111",
-                            "ref-222"
-                        ]
+                        "example": ["ref-111", "ref-222"]
                     },
                     "reply": {
                         "title": "Reply",
@@ -11966,13 +11516,7 @@
                         "title": "Entity Type",
                         "description": "Entity Type",
                         "type": "string",
-                        "enum": [
-                            "",
-                            "numeric",
-                            "email",
-                            "decimal",
-                            "url"
-                        ],
+                        "enum": ["", "numeric", "email", "decimal", "url"],
                         "example": ""
                     },
                     "is_required": {
@@ -12003,10 +11547,7 @@
                         "title": "Options Type",
                         "description": "Options Type",
                         "type": "string",
-                        "enum": [
-                            "lookup",
-                            "options"
-                        ],
+                        "enum": ["lookup", "options"],
                         "example": "options"
                     },
                     "created_at": {
@@ -12185,10 +11726,7 @@
                         "title": "Permission Type",
                         "description": "Permission type",
                         "type": "string",
-                        "enum": [
-                            "all",
-                            "custom"
-                        ],
+                        "enum": ["all", "custom"],
                         "example": "custom"
                     },
                     "permission": {
@@ -12404,10 +11942,7 @@
                         "title": "Status",
                         "description": "Admin user's status",
                         "type": "boolean",
-                        "enum": [
-                            0,
-                            1
-                        ],
+                        "enum": [0, 1],
                         "example": 1
                     },
                     "role": {
@@ -12860,11 +12395,7 @@
                         "items": {},
                         "example": [
                             {
-                                "value": [
-                                    "call",
-                                    "meeting",
-                                    "lunch"
-                                ],
+                                "value": ["call", "meeting", "lunch"],
                                 "operator": "{}",
                                 "attribute": "type",
                                 "attribute_type": "multiselect"
