@@ -31,11 +31,15 @@
                     ::name="name"
                     v-model="inputValue"
                 />
-
-                <span class="cursor-pointer truncate rounded">
-                    @{{ valueLabel ? valueLabel : selectedValue?.name }}
-                </span>
-
+                <div
+                    class="group relative h-[18px] !w-full pl-2.5"
+                    :style="{ 'text-align': position }"
+                >
+                    <span class="cursor-pointer truncate rounded">
+                        @{{ valueLabel ? valueLabel : inputValue ? "ใช่" : "ไม่ใช่" }}
+                    </span>
+                </div>
+                
                 <template v-if="allowEdit">
                     <i
                         @click="toggle"
