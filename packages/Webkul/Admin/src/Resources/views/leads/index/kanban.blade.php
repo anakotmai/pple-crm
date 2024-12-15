@@ -140,7 +140,7 @@
                                                     @{{ element.person.organization?.name }}
                                                 </span>
 
-                                                <span class="text-md leading-normal">
+                                                <span class="text-lg leading-normal font-medium">
                                                     @{{ element.person.contact_numbers[0].value }}
                                                 </span>
                                             </div>
@@ -167,7 +167,7 @@
                                     {!! view_render_event('admin.leads.index.kanban.content.stage.body.card.title.before') !!}
 
                                     <!-- Lead Title -->
-                                    <p class="text-md font-medium">
+                                    <p class="text-md font-normal">
                                         @{{ element.title }}
                                     </p>
 
