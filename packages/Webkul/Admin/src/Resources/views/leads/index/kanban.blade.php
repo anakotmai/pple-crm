@@ -121,7 +121,7 @@
                                 {!! view_render_event('admin.leads.index.kanban.content.stage.body.card.before') !!}
 
                                 <a
-                                    class="lead-item flex cursor-pointer flex-col gap-2 rounded-md border border-gray-400 bg-gray-50 p-2 dark:border-gray-400 dark:bg-gray-400"
+                                    class="lead-item flex cursor-pointer flex-col gap-2 rounded-md border border-gray-300 bg-gray-50 p-2 dark:border-gray-400 dark:bg-gray-400"
                                     :href="'{{ route('admin.leads.view', 'replaceId') }}'.replace('replaceId', element.id)"
                                 >
                                     {!! view_render_event('admin.leads.index.kanban.content.stage.body.card.header.before') !!}
