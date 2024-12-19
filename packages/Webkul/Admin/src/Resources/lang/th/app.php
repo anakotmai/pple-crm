@@ -1135,7 +1135,7 @@ return [
                     'confirm-password' => 'ยืนยันรหัสผ่าน',
                     'email'            => 'อีเมล',
                     'general'          => 'ทั่วไป',
-                    'global'           => 'สากล',
+                    'global'           => 'ทั้งหมด',
                     'group'            => 'กลุ่ม',
                     'individual'       => 'รายบุคคล',
                     'name'             => 'ชื่อ',
@@ -1145,7 +1145,7 @@ return [
                     'save-btn'         => 'บันทึกบัญชีผู้ใช้',
                     'status'           => 'สถานะ',
                     'title'            => 'สร้างผู้ใช้งาน',
-                    'view-permission'  => 'ดูสิทธิ์ความยินยอม',
+                    'view-permission'  => 'สิทธิการมองเห็น',
                 ],
 
                 'edit' => [
