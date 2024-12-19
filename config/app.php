@@ -114,6 +114,7 @@ return [
         'fa' => 'Persian',
         'tr' => 'Türkçe',
         'vi' => 'Vietnamese',
+        'th' => 'ภาษาไทย',
     ],
 
     /*

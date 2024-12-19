@@ -1778,7 +1778,7 @@ return [
                 'title' => 'About Lead',
             ],
 
-            'quotes'=> [
+            'quotes' => [
                 'subject'         => 'Subject',
                 'expired-at'      => 'Expired At',
                 'sub-total'       => 'Sub Total',
