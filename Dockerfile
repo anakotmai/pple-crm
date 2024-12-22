@@ -43,6 +43,8 @@ ARG user=www-user
 # setting work directory
 WORKDIR $container_project_path
 
+EXPOSE 8080
+
 # adding user
 RUN useradd -G www-data,root -u $uid -d /home/$user $user
 RUN mkdir -p /home/$user/.composer && \
