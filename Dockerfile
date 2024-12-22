@@ -36,9 +36,9 @@ RUN npm install -g npx
 RUN npm install -g laravel-echo-server
 
 # arguments
-ARG container_project_path
-ARG uid
-ARG user
+ARG container_project_path=/var/www/html/
+ARG uid=1001
+ARG user=www-user
 
 # setting work directory
 WORKDIR $container_project_path
@@ -51,6 +51,7 @@ RUN mkdir -p /home/$user/.composer && \
 # setting apache
 COPY ./docker/apache.conf /etc/apache2/sites-available/000-default.conf
 RUN a2enmod rewrite
+ADD . $container_project_path
 
 # setting up project from `src` folder
 RUN chmod -R 775 $container_project_path
