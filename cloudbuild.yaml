@@ -1,9 +1,9 @@
 steps:
   - name: gcr.io/kaniko-project/executor
     args:
-      - --context dir=.
-      - --dockerfile Dockerfile
-      - --destination asia-southeast1-docker.pkg.dev/pple-infra/pple/pple-crm:$TAG_NAME
+      - --context=.
+      - --dockerfile=Dockerfile
+      - --destination=asia-southeast1-docker.pkg.dev/pple-infra/pple/pple-crm:$TAG_NAME
     env:
       - TAG_NAME=$TAG_NAME
 options:
