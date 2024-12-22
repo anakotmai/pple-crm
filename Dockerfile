@@ -51,7 +51,7 @@ RUN mkdir -p /home/$user/.composer && \
 # setting apache
 COPY ./docker/apache.conf /etc/apache2/sites-available/000-default.conf
 RUN a2enmod rewrite
-ADD . $container_project_path
+ADD . $container_project_path/krayin
 
 # setting up project from `src` folder
 RUN chmod -R 775 $container_project_path
