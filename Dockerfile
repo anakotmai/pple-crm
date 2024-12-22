@@ -36,19 +36,27 @@ RUN npm install -g npx
 RUN npm install -g laravel-echo-server
 
 # arguments
-ARG container_project_path=/var/www/html/
-ARG uid=1001
-ARG user=www-user
+ARG container_project_path=/var/www/html
+# ARG uid=1001
+# ARG user=www-user
 
 # setting work directory
 WORKDIR $container_project_path
 
-EXPOSE 8080
+COPY composer.json krayin/composer.json
+COPY composer.lock krayin/composer.lock
+
+RUN cd krayin && composer install \
+    --no-interaction \
+    --no-plugins \
+    --no-scripts \
+    --no-dev \
+    --prefer-dist
 
 # adding user
-RUN useradd -G www-data,root -u $uid -d /home/$user $user
-RUN mkdir -p /home/$user/.composer && \
-    chown -R $user:$user /home/$user
+# RUN useradd -G www-data,root -u $uid -d /home/$user $user
+# RUN mkdir -p /home/$user/.composer && \
+#     chown -R $user:$user /home/$user
 
 # setting apache
 COPY ./docker/apache.conf /etc/apache2/sites-available/000-default.conf
@@ -56,10 +64,8 @@ RUN a2enmod rewrite
 ADD . $container_project_path/krayin
 
 # setting up project from `src` folder
-RUN chmod -R 775 $container_project_path
-RUN chown -R $user:www-data $container_project_path
-
-CMD sed -i "s/80/8080/g" /etc/apache2/sites-available/000-default.conf /etc/apache2/ports.conf && docker-php-entrypoint apache2-foreground
-
+# RUN chmod -R 775 $container_project_path
+# RUN chown -R $user:www-data $container_project_path
 # changing user
-USER $user
+# USER $user
+
