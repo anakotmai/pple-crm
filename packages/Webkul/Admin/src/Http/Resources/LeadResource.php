@@ -32,6 +32,9 @@ class LeadResource extends JsonResource
             'pipeline'             => new PipelineResource($this->pipeline),
             'stage'                => new StageResource($this->stage),
             'tags'                 => TagResource::collection($this->tags),
+            'contacted_reason'     => $this->contacted_reason,
+            'unreachable_reason'   => $this->unreachable_reason,
         ];
     }
 }
+

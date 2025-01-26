@@ -17,6 +17,7 @@ use Webkul\Admin\Http\Requests\MassUpdateRequest;
 use Webkul\Admin\Http\Resources\LeadResource;
 use Webkul\Admin\Http\Resources\StageResource;
 use Webkul\Attribute\Repositories\AttributeRepository;
+use Webkul\Attribute\Repositories\AttributeOptionRepository;
 use Webkul\Contact\Repositories\PersonRepository;
 use Webkul\DataGrid\Enums\DateRangeOptionEnum;
 use Webkul\Lead\Repositories\LeadRepository;
@@ -38,6 +39,7 @@ class LeadController extends Controller
     public function __construct(
         protected UserRepository $userRepository,
         protected AttributeRepository $attributeRepository,
+        protected AttributeOptionRepository $attributeOptionRepository,
         protected SourceRepository $sourceRepository,
         protected TypeRepository $typeRepository,
         protected PipelineRepository $pipelineRepository,
@@ -106,19 +108,43 @@ class LeadController extends Controller
 
             $data[$stage->sort_order] = (new StageResource($stage))->jsonSerialize();
 
+            $leads = $paginator = $query->with([
+                'tags',
+                'type',
+                'source',
+                'user',
+                'person',
+                'person.organization',
+                'pipeline',
+                'pipeline.stages',
+                'stage',
+                'attribute_values',
+            ])->paginate(10);
+
+            $options = $this->attributeOptionRepository->all();
+            $options_map = [];
+            foreach ($options as $option) {
+                $options_map[$option->id] = $option->name;
+            }
+
+            // print_r($options_map);
+
+            // foreach ($leads as $lead) {
+            //     $contacted_key = $lead->attribute_values->where('code', 'contacted_reason')->first();
+            //     if ($contacted_key) {
+            //         $lead->contacted_reason = $options_map[$contacted_key->value];
+            //         print_r($lead->contacted_reason);
+            //         print_r($options_map[$contacted_key->value]);
+            //     }
+            //     $unreachable_key = $lead->attribute_values->where('code', 'unreachable_reason')->first();
+            //     if ($unreachable_key) {
+            //         $lead->unreachable_reason = $options_map[$unreachable_key->value];
+            //     }
+            // }
+
             $data[$stage->sort_order]['leads'] = [
-                'data' => LeadResource::collection($paginator = $query->with([
-                    'tags',
-                    'type',
-                    'source',
-                    'user',
-                    'person',
-                    'person.organization',
-                    'pipeline',
-                    'pipeline.stages',
-                    'stage',
-                    'attribute_values',
-                ])->paginate(10)),
+                'data' => LeadResource::collection($leads),
+                'options' => $options_map,
 
                 'meta' => [
                     'current_page' => $paginator->currentPage(),

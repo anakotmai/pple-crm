@@ -166,8 +166,13 @@
 
                                     {!! view_render_event('admin.leads.index.kanban.content.stage.body.card.title.before') !!}
 
+                                    <!-- Lead Description -->
+                                    <p class="text-md font-normal" style="color: #770000;">
+                                        @{{ stage.leads.options[element.contacted_reason] }} @{{ stage.leads.options[element.unreachable_reason] }}
+                                    </p>
+
                                     <!-- Lead Title -->
-                                    <p class="text-md font-normal">
+                                    <p class="text-md font-normal text-gray-500">
                                         @{{ element.title }}
                                     </p>
 
