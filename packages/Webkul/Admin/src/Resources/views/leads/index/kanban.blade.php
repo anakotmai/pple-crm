@@ -315,8 +315,11 @@
                                 return;
                             }
 
-                            params['search'] += `title:${column.value.join(',')};`;
-                            params['searchFields'] += `title:like;`;
+                            params['search'] += `person.contact_numbers:${column.value.join(',')};`;
+                            params['searchFields'] += `person.contact_numbers:like;`;
+
+                            params['search'] += `person.name:${column.value.join(',')};`;
+                            params['searchFields'] += `person.name:like;`;
 
                             return;
                         }
@@ -457,7 +460,7 @@
                  * @returns {void}
                  */
                 handleScroll(stage, event) {
-                    const bottom = event.target.scrollHeight - event.target.scrollTop === event.target.clientHeight;
+                    const bottom = event.target.scrollTop + event.target.clientHeight + 10 >= event.target.scrollHeight;
 
                     if (! bottom) {
                         return;
